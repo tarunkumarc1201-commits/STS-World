@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TS World</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #101827;
+      color: white;
+    }
+    header {
+      background: #18243a;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #38bdf8;
+    }
+    h1 { margin: 0; color: #38bdf8; }
+    main { max-width: 700px; margin: auto; padding: 20px; }
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      margin: 16px 0;
+      border-radius: 12px;
+    }
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border: 0;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+    button {
+      background: #0284c7;
+      color: white;
+      cursor: pointer;
+    }
+    .muted { color: #cbd5e1; font-size: 14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>TS WORLD</h1>
+    <p>Watch Videos • Earn Coins</p>
+  </header>
+  <main>
+    <div class="card">
+      <h2>Welcome to TS World</h2>
+      <p class="muted">Your new video platform starts here.</p>
+    </div>
+    <div class="card">
+      <h2>My Wallet</h2>
+      <p>Coins: <strong id="coins">0</strong></p>
+      <button onclick="requestWithdrawal()">Request Withdrawal (25 Coins)</button>
+      <p id="message" class="muted"></p>
+    </div>
+    <div class="card">
+      <h2>Videos</h2>
+      <p class="muted">Videos will appear here after the admin adds them.</p>
+    </div>
+  </main>
+  <script>
+    function requestWithdrawal() {
+      document.getElementById('message').textContent =
+        'Login and secure wallet setup will be added next.';
+    }
+  </script>
+</body>
+</html>
